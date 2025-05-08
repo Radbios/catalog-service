@@ -11,6 +11,5 @@ Route::get('products', [ProductController::class, 'index']);
 Route::get('products/get', [ProductController::class, 'get']);
 Route::get('products/{product}', [ProductController::class, 'show']);
 Route::middleware("api_auth")->group(function() {
-    
+    //
 });
-
