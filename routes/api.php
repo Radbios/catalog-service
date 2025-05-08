@@ -8,8 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('products', [ProductController::class, 'index']);
+Route::get('products/get', [ProductController::class, 'get']);
 Route::get('products/{product}', [ProductController::class, 'show']);
-
 Route::middleware("api_auth")->group(function() {
-    //
+    Route::get('products/recomendations', [ProductController::class, 'recomendations']);
+    
 });
+
